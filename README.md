@@ -1,6 +1,6 @@
 # NOVAL
 
-> **Notation for Open and Versatile Archives Layer**  
+> **<ins>N</ins>otation for <ins>O</ins>pen and <ins>V</ins>ersatile <ins>A</ins>rchives <ins>L</ins>ayer**  
 > **Record anything. Define everything.**
 
 NOVALは、記録対象の構造とルールを自分で定義し、あらゆる情報を残せる汎用アーカイブサービスです。構造化されたProtocol Recordと、すぐに書き残せるOpen Recordを共通の履歴モデルで扱います。
