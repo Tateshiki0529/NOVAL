@@ -5,7 +5,21 @@
 
 NOVALは、記録対象の構造とルールを自分で定義し、あらゆる情報を残せる汎用アーカイブサービスです。構造化されたProtocol Recordと、すぐに書き残せるOpen Recordを共通の履歴モデルで扱います。
 
-現在は設計・初期開発段階です。
+現在はCore MVPの最初のVertical Sliceを実装中です。
+
+## Implemented
+
+- Laravel sessionによるアカウント登録・ログイン
+- private Protocol DraftとimmutableなPublished Version
+- JSON Schema Draft 2020-12の安全検査、Normalize、全Error検証
+- CategoryとLogBook
+- Protocol Recordのcreate／update／論理deleteと完全snapshot Revision
+- `baseRevisionId`による楽観ロック
+- private Open Recordと完全snapshot Revision
+- SQLiteローカル開発、MySQL／MariaDB向けMigration
+- server-rendered Blade UIとbuild済みVite Asset
+
+未決事項のCore MVP既定値は[ADR 0001](docs/adr/0001-core-mvp-decisions.md)で管理します。
 
 ## Runtime
 
@@ -13,6 +27,28 @@ NOVALは、記録対象の構造とルールを自分で定義し、あらゆる
 - Laravel 13.x
 - MySQL 8.0+ / MariaDB 10.11+
 - Redis・常駐Worker・WebSocket・本番Node.jsを必要としない共有レンタルサーバー互換構成
+
+## Development
+
+```bash
+cp .env.example .env
+composer install
+php artisan key:generate
+touch database/database.sqlite
+php artisan migrate
+npm install
+npm run build
+php artisan serve
+```
+
+品質検査:
+
+```bash
+composer format:check
+composer analyse
+composer test
+npm run build
+```
 
 ## Documentation
 

@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+:root { color-scheme: dark; --ink:#eef2ff; --muted:#9ca3af; --panel:#111827; --line:#273449; --accent:#7dd3fc; --accent2:#c4b5fd; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; background:radial-gradient(circle at 15% 0,#172554 0,transparent 34%),#070b14; color:var(--ink); font-family:ui-sans-serif,system-ui,sans-serif; }
+a { color:var(--accent); text-decoration:none; }
+.site-header { min-height:68px; display:flex; align-items:center; gap:18px; padding:0 max(24px,calc((100vw - 1180px)/2)); border-bottom:1px solid var(--line); background:#070b14dd; position:sticky; top:0; backdrop-filter:blur(16px); z-index:10; }
+.brand { color:white; font-weight:900; letter-spacing:.16em; font-size:1.25rem; }.tagline{color:var(--muted);font-size:.8rem}.site-header nav{margin-left:auto;display:flex;align-items:center;gap:16px}.site-header nav form{display:inline}
+.container { width:min(1180px,calc(100% - 32px)); margin:0 auto; padding:44px 0 80px; }
+.hero { padding:80px 0; max-width:820px; }.hero h1{font-size:clamp(2.6rem,7vw,5.8rem);line-height:.98;margin:.2em 0}.hero>p:not(.eyebrow){font-size:1.2rem;color:#cbd5e1;max-width:680px}
+.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:800}.muted{color:var(--muted)}
+.grid{display:grid;gap:18px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.workspace-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.span-2{grid-column:span 2}
+.card { background:linear-gradient(160deg,#111827ee,#0b1220ee); border:1px solid var(--line); border-radius:18px; padding:24px; box-shadow:0 20px 50px #0004; }.card h2{margin-top:0}.auth-panel{max-width:480px;margin:6vh auto}.page-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:26px}.page-heading h1{margin:.15em 0;font-size:2.2rem}
+.stack{display:grid;gap:14px}label{display:grid;gap:7px;color:#cbd5e1;font-size:.86rem;font-weight:700}input,textarea,select{width:100%;border:1px solid #334155;border-radius:9px;background:#050a13;color:var(--ink);padding:10px 12px;font:inherit}textarea{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.82rem;resize:vertical}input:focus,textarea:focus,select:focus{outline:2px solid #38bdf8;outline-offset:1px}.check{display:flex;grid-template-columns:auto 1fr;align-items:center}.check input{width:auto}
+.button,.small-button{border:0;border-radius:9px;background:linear-gradient(135deg,#38bdf8,#8b5cf6);color:#07111f;font-weight:900;padding:11px 17px;cursor:pointer;display:inline-block}.button.secondary{background:#182235;color:var(--ink);border:1px solid var(--line)}.small-button{padding:6px 10px;font-size:.75rem}.link-button{background:none;border:0;color:var(--accent);cursor:pointer;font:inherit}.actions{display:flex;gap:12px;margin-top:28px}
+.compact{margin-top:14px}.danger-form{margin-top:10px}.danger-button{border:1px solid #7f1d1d;border-radius:8px;background:#450a0a;color:#fecaca;padding:7px 10px;cursor:pointer}summary{cursor:pointer;color:#dbeafe}
+.notice{padding:15px 18px;border-radius:10px;margin-bottom:20px}.notice.success{background:#064e3b;border:1px solid #10b981}.notice.error{background:#4c0519;border:1px solid #fb7185}.notice ul{margin-bottom:0}.item-list{display:grid;gap:9px;margin-top:18px}.item{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line)}.item.block{display:block}.item.block p{white-space:pre-wrap}.pill{font-size:.7rem;border-radius:999px;padding:4px 8px;background:#263247}.pill.published{background:#064e3b;color:#a7f3d0}.plain-list{color:#cbd5e1}
+@media(max-width:760px){.tagline{display:none}.grid.two,.grid.three,.workspace-grid{grid-template-columns:1fr}.span-2{grid-column:auto}.page-heading{display:block}.site-header{padding:0 16px}.container{padding-top:24px}.hero{padding:50px 0}}
